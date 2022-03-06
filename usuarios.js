@@ -10,6 +10,7 @@ let usuarios=[
     {nombre:"lina",edad:20,espaisa:false},
     {nombre:"diomedez",edad:60,espaisa:false}
 ]
+
 //filtrar el arreglo para mostrar solo los usuarios menores de edad
 //FUNCION TRADICIONAL
 /*let filtrado = usuarios.filter(function(usuario){
@@ -20,10 +21,10 @@ let usuarios=[
   console.log(filtrado)*/
 
 //FUNCION FLECHA
-/*let mostrar = usuarios.filter(elemento => elemento.espaisa!=true)
+/*let mostrar = usuarios.filter(elemento => elemento.edad<=18)
 console.log(mostrar)*/
 
-
+//-------------------------------------------------------------------------
 //filtrat usuarios que sean paisas
 //FUNCION TRADICIONAL
 /*let filtrado = usuarios.filter(function(usuario){
@@ -33,8 +34,11 @@ console.log(mostrar)*/
 })
   console.log(filtrado)*/
 
+//FUNCION FELCHA
+/*let mostrar = usuarios.filter(usuario =>usuario.espaisa==true)
+console.log(mostrar)*/
 
-
+//-------------------------------------------------------------------------
 //filtrar objetos de medellin y menores de edad
 //FUNCION TRADICIONAL
 /*let filtrado = usuarios.filter(function(usuario){
@@ -44,14 +48,23 @@ console.log(mostrar)*/
 })
   console.log(filtrado)*/
 
+//FUNCION FLECHA
+/*let mostrar = usuarios.filter(usuario=> usuario.espaisa==true & usuario.edad<18)
+console.log(mostrar)*/
 
-
+//-------------------------------------------------------------------------
 //MAPEO, ASIGNA,ALTERA
 /*let datosMapeados = usuarios.map(function(usuario){
 
     return(usuario.nombre=usuario.nombre+" -- cesde")
 
 })
+console.log(datosMapeados)
+console.log(usuarios)
+*/
+
+//FUNCION FLECHA
+/*let datosMapeados = usuarios.map(usuario=>usuario.nombre=usuario.nombre+" -- Cesde")
 console.log(datosMapeados)
 console.log(usuarios)*/
 
@@ -65,4 +78,8 @@ usuarios.forEach(function(usuario){
     console.log(suma)
 
 })*/
+//FUNCION FLECHA
+/*let suma = 0
+usuarios.forEach(usuario =>suma=suma+usuario.edad)
+console.log(suma)*/
 
